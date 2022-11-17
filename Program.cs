@@ -41,23 +41,23 @@ int i = 0;
 
 foreach (string question in questions)
 {
-    Console.WriteLine($"{question}(Y/N): ");
+    MooseSays($"{question}(Y/N): ");
     string answer = Console.ReadLine().ToLower();
 
     while (answer != "y" && answer != "n")
     {
-        Console.Write($"{question} (Y/N): ");
+        MooseSays($"{question} (Y/N): ");
         answer = Console.ReadLine().ToLower();
     }
 
      if (answer == "y") 
     {
-        Console.WriteLine($"{yesses[i]}");
+        MooseSays($"{yesses[i]}");
         i++;
     }
     else
     {
-        Console.WriteLine($"{nos[i]}") ;
+        MooseSays($"{nos[i]}") ;
         i++;
     }
 
